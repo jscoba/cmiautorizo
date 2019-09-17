@@ -7,7 +7,7 @@ Este proyecto es un sistema de autorizaciones para la comunicación de dietas bl
 El proyecto estará construido sobre el framework AdonisJS y utilizará la API de las bases de datos del centro para capturar datos. Todo el desarrollo estará guiado siguiendo el marco de la asignatura Infraestructuras Virtuales del Grado en Ingeniería Informática de la Universidad de Granada.
 
 ## Documentación para IV
-La descripción de las tareas realizadas a lo largo de cada hito puede encontrarse [aquí](documentacion).
+La descripción de las tareas realizadas puede encontrarse [aquí](documentacion).
 
 
 ## Licencia
