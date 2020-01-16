@@ -1,0 +1,6 @@
+{
+  "name": "sqliteDs",
+  "connector": "memory",
+  "localStorage": "",
+  "file": "ds.json"
+}
