@@ -1,8 +1,7 @@
 import {CmiautorizoApplication} from './application';
 import {ApplicationConfig} from '@loopback/core';
 
-import { winstonLogger } from "./lib/logger";
-
+import {winstonLogger} from './lib/logger';
 
 export {CmiautorizoApplication};
 
