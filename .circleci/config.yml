@@ -28,7 +28,7 @@ jobs:
             - v1-dependencies-
 
       - run: cd cmiautorizo-backend
-      - run: npm install
+      - run: cd cmiautorizo-backend && npm install
 
       - save_cache:
           paths:
@@ -36,4 +36,4 @@ jobs:
           key: v1-dependencies-{{ checksum "cmiautorizo-backend/package.json" }}
 
       # run tests!
-      - run: npm test
+      - run: cd cmiautorizo-backend && npm run test
