@@ -1,0 +1,5 @@
+cmiautorizo-backend/node_modules
+cmiautorizo-backend/npm-debug.log
+cmiautorizo-backend//dist
+# Cache used by TypeScript's incremental build
+cmiautorizo-backend/*.tsbuildinfo
