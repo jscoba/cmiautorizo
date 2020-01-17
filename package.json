@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "heroku-prebuild": "cd cmiautorizo-backend && npm install && npm run build",
+    "start": "cd cmiautorizo-backend && npm start"
+  }
+}
