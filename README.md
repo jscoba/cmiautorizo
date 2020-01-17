@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/jscoba/cmiautorizo.svg?branch=master)](https://travis-ci.org/jscoba/cmiautorizo)
 
+[![CircleCI](https://circleci.com/gh/jscoba/cmiautorizo.svg?style=svg)](https://circleci.com/gh/jscoba/cmiautorizo)
+
 Servicio de autorizaciones en tiempo real para cmisabel
 
 Este proyecto es un sistema de autorizaciones para la comunicación de dietas blandas y pernoctaciones en el Colegio Mayor Isabel la Católica. De esta manera, la dirección del colegio podrá comunicarse de una forma más eficiente con el personal del centro para autorizar a los colegiales a los distintos servicios "especiales" del centro.

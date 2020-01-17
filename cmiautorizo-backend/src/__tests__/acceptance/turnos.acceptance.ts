@@ -28,6 +28,19 @@ describe('TurnosController', () => {
       .expect(400)
       .expect(/Lavadora no válida/);
   });
+  it('can create a turno', async () => {
+    await client
+      .post('/turnos')
+      .send({
+        hab: 202,
+        lavadora: 'miele1',
+        time: '2020-01-17T00:22:54.468Z',
+        lavado: true,
+      })
+      .set('Accept', 'application/json')
+      .expect('Content-Type', /json/)
+      .expect(200);
+  });
 
   it('can count how many turnos there are', async () => {
     await client.get('/turnos/count').expect(200);
