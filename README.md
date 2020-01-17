@@ -15,7 +15,14 @@ Para arrancar la aplicacion es tan sencillo como usar `npm start` desde la carpe
 buildtool: package.json
 
 Además esta aplicación se puede desplegar sobre un PaaS (como Heroku) directamente. Como ejemplo está disponible aquí:
+
 Despliegue: https://cmiautorizo-backend.herokuapp.com/
+
+Ahora el repositorio está disponible como imagen de docker en el Docker Hub. La puedes descargar haciendo: `docker pull jscoba/cmiautorizo` o accediendo a [Docker Hub](https://hub.docker.com/r/jscoba/cmiautorizo)
+
+También está desplegado como contenedor en la siguiente dirección:
+
+Contenedor: https://cmiautorizo-docker.azurewebsites.net/
 
 
 

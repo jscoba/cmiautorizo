@@ -18,3 +18,9 @@ Aquí tenemos ahora dos posibilidades: subir manualmente la imagen creada desde 
 Esta es la opción que he elegido. Al activar los autobuilds tarda un poco en generar la imagen (unos 10 minutos) pero una vez lista ya podemos descargar esta imagen de docker ejecutando directamente `docker pull jscoba/cmiautorizo`
 
 ![](imgs/docker-hub.png)
+
+Para poder desplegar este contenedor se ha usado el servicio *App Service* de Microsoft Azure. Para ello se ha creado un nuevo servicio usando el tier gratuito y se ha configurado para que se descargue la imagen del Docker Hub. Una vez hecho esto la aplicación ya está corriendo en la nube de Azure. Además se activa la integración contínua a través de un WebHook en Docker Hub para que al actualizar la imagen se actualize también la del servicio que está corriendo.
+
+![](imgs/web-service.png)
+
+![](imgs/webhook.png)
