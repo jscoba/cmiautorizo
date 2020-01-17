@@ -10,6 +10,15 @@ El proyecto está segmentado en dos microservicios, un backend que gestiona los 
 
 Todo el desarrollo estará guiado siguiendo el marco de la asignatura Infraestructuras Virtuales del Grado en Ingeniería Informática de la Universidad de Granada.
 
+Para arrancar la aplicacion es tan sencillo como usar `npm start` desde la carpeta cmiautorizo-backend
+
+buildtool: package.json
+
+Además esta aplicación se puede desplegar sobre un PaaS (como Heroku) directamente. Como ejemplo está disponible aquí:
+Despliegue: https://cmiautorizo-backend.herokuapp.com/
+
+
+
 ## Documentación para IV
 La descripción de las tareas realizadas puede encontrarse [aquí](documentacion).
 
