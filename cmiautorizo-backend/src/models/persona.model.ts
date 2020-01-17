@@ -22,7 +22,6 @@ export class Persona extends Entity {
   })
   hab: number;
 
-
   constructor(data?: Partial<Persona>) {
     super(data);
   }

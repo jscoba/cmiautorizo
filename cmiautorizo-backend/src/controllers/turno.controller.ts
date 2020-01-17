@@ -16,14 +16,17 @@ import {
   put,
   del,
   requestBody,
+  HttpErrors,
 } from '@loopback/rest';
 import {Turno} from '../models';
+import * as codigoLavadoras from '../models/codigoLavadoras.json';
 import {TurnoRepository} from '../repositories';
+import {winstonLogger} from '../lib/logger';
 
 export class TurnoController {
   constructor(
     @repository(TurnoRepository)
-    public turnoRepository : TurnoRepository,
+    public turnoRepository: TurnoRepository,
   ) {}
 
   @post('/turnos', {
@@ -31,6 +34,10 @@ export class TurnoController {
       '200': {
         description: 'Turno model instance',
         content: {'application/json': {schema: getModelSchemaRef(Turno)}},
+      },
+      '400': {
+        description: 'Turno no valido',
+        content: 'error code',
       },
     },
   })
@@ -47,7 +54,14 @@ export class TurnoController {
     })
     turno: Omit<Turno, 'id'>,
   ): Promise<Turno> {
-    return this.turnoRepository.create(turno);
+    //console.log(codigoLavadoras.codigoLavadoras)
+    if (codigoLavadoras.codigoLavadoras.includes(turno.lavadora)) {
+      winstonLogger.info('Nuevo turno creado: ' + turno);
+      return this.turnoRepository.create(turno);
+    } else {
+      winstonLogger.error('Lavadora no válida' + turno);
+      throw new HttpErrors.BadRequest('Lavadora no válida');
+    }
   }
 
   @get('/turnos/count', {
@@ -77,7 +91,8 @@ export class TurnoController {
     },
   })
   async find(
-    @param.query.object('filter', getFilterSchemaFor(Turno)) filter?: Filter<Turno>,
+    @param.query.object('filter', getFilterSchemaFor(Turno))
+    filter?: Filter<Turno>,
   ): Promise<Turno[]> {
     return this.turnoRepository.find(filter);
   }

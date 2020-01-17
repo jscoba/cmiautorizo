@@ -8,9 +8,7 @@ export class TurnoRepository extends DefaultCrudRepository<
   typeof Turno.prototype.id,
   TurnoRelations
 > {
-  constructor(
-    @inject('datasources.sqliteDs') dataSource: SqliteDsDataSource,
-  ) {
+  constructor(@inject('datasources.sqliteDs') dataSource: SqliteDsDataSource) {
     super(Turno, dataSource);
   }
 }

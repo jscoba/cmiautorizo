@@ -5,7 +5,7 @@ export class Turno extends Entity {
   @property({
     type: 'number',
     id: true,
-    required: true,
+    required: false,
     generated: true,
   })
   id: number;
@@ -30,10 +30,9 @@ export class Turno extends Entity {
 
   @property({
     type: 'boolean',
-    default: False,
+    default: false,
   })
   lavado?: boolean;
-
 
   constructor(data?: Partial<Turno>) {
     super(data);

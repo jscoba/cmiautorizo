@@ -8,9 +8,7 @@ export class PersonaRepository extends DefaultCrudRepository<
   typeof Persona.prototype.id,
   PersonaRelations
 > {
-  constructor(
-    @inject('datasources.sqliteDs') dataSource: SqliteDsDataSource,
-  ) {
+  constructor(@inject('datasources.sqliteDs') dataSource: SqliteDsDataSource) {
     super(Persona, dataSource);
   }
 }

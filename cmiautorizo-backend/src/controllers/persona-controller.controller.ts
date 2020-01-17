@@ -23,7 +23,7 @@ import {PersonaRepository} from '../repositories';
 export class PersonaControllerController {
   constructor(
     @repository(PersonaRepository)
-    public personaRepository : PersonaRepository,
+    public personaRepository: PersonaRepository,
   ) {}
 
   @post('/personas', {
@@ -59,7 +59,8 @@ export class PersonaControllerController {
     },
   })
   async count(
-    @param.query.object('where', getWhereSchemaFor(Persona)) where?: Where<Persona>,
+    @param.query.object('where', getWhereSchemaFor(Persona))
+    where?: Where<Persona>,
   ): Promise<Count> {
     return this.personaRepository.count(where);
   }
@@ -77,7 +78,8 @@ export class PersonaControllerController {
     },
   })
   async find(
-    @param.query.object('filter', getFilterSchemaFor(Persona)) filter?: Filter<Persona>,
+    @param.query.object('filter', getFilterSchemaFor(Persona))
+    filter?: Filter<Persona>,
   ): Promise<Persona[]> {
     return this.personaRepository.find(filter);
   }
@@ -99,7 +101,8 @@ export class PersonaControllerController {
       },
     })
     persona: Persona,
-    @param.query.object('where', getWhereSchemaFor(Persona)) where?: Where<Persona>,
+    @param.query.object('where', getWhereSchemaFor(Persona))
+    where?: Where<Persona>,
   ): Promise<Count> {
     return this.personaRepository.updateAll(persona, where);
   }
