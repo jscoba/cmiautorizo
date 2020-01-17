@@ -31,3 +31,8 @@ Una vez que hacemos push ya podemos ver que en ambas plataformas se generan trab
 ![](imgs/circleci-ok.png)
 ![](imgs/travis-ok.png)
 ![](imgs/gh-tests.png)
+
+
+La herramienta de construcción que usamos en todo caso es npm configurada a partir de archivos `package.json` Esta herramienta nos permite tener varias tareas listos para correr (similar a Make pero específica de NodeJS).
+
+Al ser este un repositorio en el que la raiz de la aplicación no es la raiz del repositorio hay que estar jugando constantemente con las rutas de los ficheros de configuración para que npm pueda encontrar el archivo json correcto para poder ejecutar las tareas.
