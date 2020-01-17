@@ -48,4 +48,28 @@ export class PingController {
       headers: Object.assign({}, this.req.headers),
     };
   }
+
+  @get('/status', {
+    responses: {
+      '200': {
+        description: 'Status of app',
+        content: {
+          'application/json': {
+            schema: {
+              type: 'object',
+              properties: {
+                status: {type: 'string'},
+              },
+            },
+          },
+        },
+      },
+    },
+  })
+  status(): object {
+    // Reply with a greeting, the current time, the url, and request headers
+    return {
+      status: 'OK',
+    };
+  }
 }

@@ -18,4 +18,10 @@ describe('PingController', () => {
     const res = await client.get('/ping?msg=world').expect(200);
     expect(res.body).to.containEql({greeting: 'Hello from LoopBack'});
   });
+  it('status OK returned GET /status', async () => {
+    await client
+      .get('/status')
+      .expect(200)
+      .expect({status: 'OK'});
+  });
 });
