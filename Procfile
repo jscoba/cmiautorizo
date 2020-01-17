@@ -1,0 +1,1 @@
+web: cd cmiautorizo-backend && npm start
